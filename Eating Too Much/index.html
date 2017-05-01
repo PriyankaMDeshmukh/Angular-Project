@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  ng-app="checkIfTooMuch">
+<head>
+  <meta charset="utf-8">
+  <title>Check if too much</title>
+
+<link rel="stylesheet" href="style/checkIfTooMuch.css">
+</head>
+<body>
+  <div class="container" ng-controller="checkIfTooMuchController">
+
+    <h1>Check If Too Much</h1>
+    <h2>Input all the items you have for lunch separated by a comma and check if its too much</h2>
+    <input type="text" ng-model="items" ng-style="greenOrRedI">
+    <button type="button" name="button" ng-click="checkIfTooMuchF()">Check If Too Much</button>
+    <div class="result" ng-style="greenOrRedD" >
+      {{yourResult}}
+    </div>
+  </div>
+  <!--libraries-->
+  <script  src="libraries/angular.min.js"></script>
+  <!--main js file-->
+  <script  src="scripts/app.js"></script>
+  <!--style-->
+</body>
+</html>

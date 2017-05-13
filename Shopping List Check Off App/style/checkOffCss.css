@@ -1,0 +1,26 @@
+
+#checkOff h1{
+color: red;
+}
+body{
+  font-size: 2em;
+}
+ul{
+  margin-left: 100px;
+}
+li{
+  padding-bottom: 10px;
+
+}
+h1, h2{
+  text-align: center;
+}
+#bought h1{
+color: green;
+}
+button{
+margin-left: 10px;
+}
+span{
+  padding: 2px;
+}

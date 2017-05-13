@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Check Off List</title>
+  <script type="text/javascript" src="libraries/angular.min.js"></script>
+  <script type="text/javascript" src="scripts/checkOffApp.js"></script>
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <link rel="stylesheet" href="style/checkOffCss.css">
+</head>
+<body ng-app="ShoppingListCheckOff" >
+  <div class="container  row">
+    <!--to buy-->
+    <h1>Shopping List Check Off</h1>
+    <h2>Check off the things already bought</h2>
+    <div id="checkOff" ng-controller="ToBuyController as tobuycon" class="col-md-6">
+      <h1>To Buy</h1>
+      <h2 ng-show="!tobuycon.tobuyList.length">Everything is bought!</h2>
+      <ul>
+        <li ng-repeat="item in tobuycon.tobuyList">
+          Buy {{item.quantity}} {{item.name}}
+          <button type="button" name="button" class="btn btn-default" ng-click="tobuycon.addToboughtList($index)"><span class="glyphicon glyphicon-ok"> Bought</span></button>
+        </li>
+      </ul>
+    </div>
+    <!--bought-->
+    <div id="bought" ng-controller="AlreadyBoughtController as boughtcon" class="col-md-6">
+      <h1>Already Bought</h1>
+      <h2 ng-show="!boughtcon.boughtList.length">Nothing bought yet</h2>
+      <ul>
+        <li ng-repeat="item in boughtcon.boughtList">
+          Bought {{item.quantity}} {{item.name}}
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  </body>
+</html>

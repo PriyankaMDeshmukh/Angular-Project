@@ -7,11 +7,11 @@
     $stateProvider
     .state('home',{
       url : '/',
-      templateUrl : 'src/shoppinglist/templates/homePage.html'
+      templateUrl : 'src/shoppingList/templates/homePage.html'
     })
     .state('fullList',{
       url : '/fullList-url',
-      templateUrl : 'src/shoppinglist/templates/fullList.html',
+      templateUrl : 'src/shoppingList/templates/fullList.html',
       controller : 'ShoppingListController as SLCon',
       resolve : {
         myItm : ['ShoppingListService', function (ShoppingListService) {
@@ -21,7 +21,7 @@
     })
     .state('itemDetail',{
       url : '/item-Detail/{categoryShortName}',
-      templateUrl : 'src/shoppinglist/templates/IndividualItemDetails.html',
+      templateUrl : 'src/shoppingList/templates/IndividualItemDetails.html',
       controller : 'ItemDetailController as itemDetail',
       resolve : {
         ItmD: ['$stateParams','ShoppingListService', function ($stateParams,ShoppingListService) {

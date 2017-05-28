@@ -1,7 +1,7 @@
 (function () {
   angular.module('ShoppingListApp')
   .component('why',{
-    templateUrl : 'src/shoppinglist/templates/ItemDetailsComponent.html',
+    templateUrl : 'src/shoppingList/templates/ItemDetailsComponent.html',
     bindings : {
       last : '<'
     }

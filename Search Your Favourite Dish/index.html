@@ -1,0 +1,25 @@
+  <html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <script type="text/javascript" src="libraries/angular.min.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
+
+   <link rel="stylesheet" href="styles/bootstrap.min.css">
+   <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body ng-app="NarrowItDownApp">
+
+  <div class="container" ng-controller="NarrowItDownController as narrowCon">  <h1>Welcome to Pram's Restaurant</h1>
+    <input type="text" name="" value="" ng-model="narrowCon.search" class="form-control" placeholder="Enter dish name">
+    <button type="button" name="button" class="btn btn-primary" ng-click="narrowCon.getMatchedMenuItems()">Narrow It Down</button>
+<div class="row">
+  <span ng-if="narrowCon.emptyList">No item found</span>
+</div>
+
+    <found-Items my-list="narrowCon.list" on-remove = "narrowCon.dontWantIt(index)" ></found-Items>
+
+  </div>
+</body>
+</html>
